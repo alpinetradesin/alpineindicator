@@ -1,1 +1,85 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alpine Indicator</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {font-family: Arial; background:#0f172a; color:white; text-align:center; margin:0;}
+    .box {padding:40px 20px;}
+    .card {
+      background:#1e293b;
+      padding:20px;
+      margin:20px auto;
+      width:300px;
+      border-radius:12px;
+    }
+    button {
+      padding:12px 20px;
+      border:none;
+      border-radius:8px;
+      background:#00ffe5;
+      font-weight:bold;
+      cursor:pointer;
+    }
+    input {
+      width:90%;
+      padding:10px;
+      margin:8px 0;
+      border-radius:6px;
+      border:none;
+    }
+    #popup {
+      display:none;
+      position:fixed;
+      top:0; left:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.8);
+    }
+    .popup-box {
+      background:#1e293b;
+      padding:20px;
+      width:300px;
+      margin:100px auto;
+      border-radius:10px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>ALPINE INDICATOR</h1>
+  <p>Premium TradingView Tool</p>
+
+  <div class="card">
+    <h2>1 Month Plan</h2>
+    <p>₹999</p>
+    <button onclick="openForm(1)">Buy Now</button>
+  </div>
+
+  <div class="card">
+    <h2>2 Month Plan</h2>
+    <p>₹1799</p>
+    <button onclick="openForm(2)">Buy Now</button>
+  </div>
+</div>
+
+<div id="popup">
+  <div class="popup-box">
+    <h3>Enter Details</h3>
+    <input type="text" id="name" placeholder="Your Name">
+    <input type="email" id="email" placeholder="Your Email">
+    <input type="text" id="tv" placeholder="TradingView Username">
+    <button onclick="alert('Next step we connect Razorpay')">Continue</button>
+  </div>
+</div>
+
+<script>
+function openForm(){
+  document.getElementById("popup").style.display="block";
+}
+</script>
+
+</body>
+  </html>
